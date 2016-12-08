@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>评分效果</title>
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+
+</head>
+<body>
+<div data-role="page"  >
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <h1>评分</h1>
+    </div>
+    <div data-role="main">
+<div class="shop-rating">
+    <span class="title">你对我人品的评价:</span>
+    <ul class="rating-level" id="stars2">
+        <li><a href="javascript:void(0);" class="one-star" star:value="20">20</a></li>
+        <li><a href="javascript:void(0);" class="two-stars" star:value="40">40</a></li>
+        <li><a href="javascript:void(0);" class="three-stars" star:value="60">60</a></li>
+        <li><a href="javascript:void(0);" class="four-stars" star:value="80">80</a></li>
+        <li><a href="javascript:void(0);" class="five-stars" star:value="100">100</a></li>
+    </ul>
+    <span id="stars2-tips" class="result"></span>
+    <input type="hidden" id="stars2-input" name="b" value="" size="2" />
+</div>
+<!--评分-->
+<script>
+    var TB = function() {
+        var T$ = function(id) { return document.getElementById(id) }
+        var T$$ = function(r, t) { return (r || document).getElementsByTagName(t) }
+        var Stars = function(cid, rid, hid, config) {
+            var lis = T$$(T$(cid), 'li'), curA;
+            for (var i = 0, len = lis.length; i < len; i++) {
+                lis[i]._val = i;
+                lis[i].onclick = function() {
+                    T$(rid).innerHTML = '<em>' + (T$(hid).value = T$$(this, 'a')
+                                    [0].getAttribute('star:value')) + '分</em> - ' + config.info[this._val];
+                    curA = T$$(T$(cid), 'a')[T$(hid).value / config.step - 1];
+                };
+                lis[i].onmouseout = function() {
+                    curA && (curA.className += config.curcss);
+                }
+                lis[i].onmouseover = function() {
+                    curA && (curA.className = curA.className.replace(config.curcss, ''));
+                }
+            }
+        };
+        return {Stars: Stars}
+    }().Stars('stars2', 'stars2-tips', 'stars2-input', {
+        'info' : ['1星级用户', '2星级用户', '3星级用户', '4星级用户', '5星级用户'],
+        'curcss': ' current-rating',
+        'step': 20
+    });
+</script>
+        </div>
+    </div>
+</body>
+</html>

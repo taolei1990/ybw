@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>评价</title>
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+</head>
+<body class="noshadow ">
+<div data-role="page"  >
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <a href="#" class="ico-btn-l "><i class="icon-bs iconfont">&#xe61e;彩虹客</i></a>
+        <h1>&nbsp;</h1>
+        <a href="#" class="ico-btn-r "><i class="icon-bs iconfont">提交评价</i></a></div>
+
+    <div data-role="main">
+       <div class="wx-jjr-txxq">
+           <img src="../images/mipmap-xhdpi/lz-z.png" >
+           <div class="wx-jjr-gs">
+           <h1>投资人</h1>
+           <p><em>所属公司:</em><span>某某置业</span></p>
+           <p><em>好评率:</em><span>暂无</span></p>
+
+               <i class="icon-dx iconfont">&#xe615;</i><!--短信图标-->
+               <i class="icon-dh iconfont">&#xe619;</i><!--电话图标-->
+           </div>
+       </div>
+<div class="wx-ztpj">
+    <span>总体评价:</span>
+    <img src="../images/mipmap-xhdpi/wx-xx-f.png";><!--亮的星星-->
+    <img src="../images/mipmap-xhdpi/wx-xx-f.png";><!--亮的星星-->
+    <img src="../images/mipmap-xhdpi/wx-xx-f.png";><!--亮的星星-->
+    <img src="../images/mipmap-xhdpi/wx-xx-t.png";><!--没亮的星星-->
+    <img src="../images/mipmap-xhdpi/wx-xx-t.png";><!--没亮的星星-->
+</div>
+<div class="wx-tcjjr">
+    <textarea name="projectIntro" data-corners="false" maxlength="500"  placeholder="亲，吐槽一下经纪人还靠谱吗？服务还满意吗？" ></textarea>
+<span>500</span>
+</div>
+<div class="wx-sctp">
+    <p>上传图片</p>
+    <a href="javascript:;" class="wx-file">
+        <div id="localImag"><img id="preview" ></div>
+        <input type="file" data-corners="false" name="file" id="doc" value="" onchange="javascript:setImagePreview();" >
+    </a>
+    <script type="text/javascript">
+        //下面用于图片上传预览功能
+        function setImagePreview(avalue) {
+            var docObj=document.getElementById("doc");
+
+            var imgObjPreview=document.getElementById("preview");
+            if(docObj.files &&docObj.files[0])
+            {
+//火狐下，直接设img属性
+                imgObjPreview.style.display = 'block';
+                imgObjPreview.style.width = '60px';
+                imgObjPreview.style.height = '60px';
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+            }
+            else
+            {
+//IE下，使用滤镜
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                var localImagId = document.getElementById("localImag");
+//必须设置初始大小
+                localImagId.style.width = "60px";
+                localImagId.style.height = "60px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+                try{
+                    localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                }
+                catch(e)
+                {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+            return true;
+        }
+
+    </script>
+</div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul class="wx-db-lxds">
+                <li><a href="#"  class="wx-pfcp"><i class="iconfont">&#xe614;</i>我的项目</a></li>
+                <li><a href="#"  class="wx-wdxm"><i class="iconfont">&#xe613;</i>服务产品</a></li>
+                <li><a href="#"  class="wx-lxzx"><i class="iconfont">&#xe615;</i>他的回答</a></li>
+                <li><a href="#"  class="wx-jcdp"><i class="iconfont">&#xe616;</i>写点评</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

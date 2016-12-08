@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>产品详情</title>
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+
+    <!--↘↘ 用于控制产品图片轮播样式-->
+    <link rel="stylesheet" href="../css/flickity-docs.css" media="screen" />
+    <script src="../js/flickity-docs.min.js"></script><!--产品图片 动画效果   -->
+    <!--↖↖用于控制产品图片轮播样式-->
+</head>
+<body class="noshadow" >
+
+<div data-role="page">
+
+    <!--头部工具栏-->
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <h1>产品名称</h1>
+        <a href="#" data-rel="back" class="ui-btn ui-btn-1 ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left ui-btn-icon-notext">Back</a>
+        <a href="#" class="ui-btn-right jqm-search-link  ui-btn ui-btn-1 ui-corner-all ui-shadow ui-btn-icon-left ui-icon-shop ui-btn-icon-notext">Button</a>
+    </div>
+    <!--页面内容-->
+    <div data-role="main">
+        <!--产品图片-->
+        <div class="hero-gallery js-flickity" ><!--data-flickity-options='{ "autoPlay":5000 }' 图片自动播放-->
+            <div class="hero-gallery__cell hero-gallery__cell--1">
+                <div class="content-wrap">
+                    <img src="../../msite/images/banner-img/sample-01.jpg" alt=" 图片自动占满屏幕宽度"/>
+
+                </div>
+            </div>
+            <div class="hero-gallery__cell hero-gallery__cell--2">
+                <div class="content-wrap">
+                    <img src="../../msite/images/banner-img/sample-02.jpg" alt=" 图片自动占满屏幕宽度"/>
+                </div>
+            </div>
+            <div class="hero-gallery__cell hero-gallery__cell--3">
+                <div class="content-wrap">
+                    <img src="../../msite/images/banner-img/sample-03.jpg" alt=" 图片自动占满屏幕宽度"/>
+                </div>
+            </div>
+            <div class="hero-gallery__cell hero-gallery__cell--4">
+                <div class="content-wrap">
+                    <img src="../../msite/images/banner-img/sample-04.jpg" alt=" 图片自动占满屏幕宽度"/>
+                </div>
+            </div>
+            <div class="hero-gallery__cell hero-gallery__cell--5">
+                <div class="content-wrap">
+                    <img src="../../msite/images/banner-img/sample-05.jpg" alt=" 图片自动占满屏幕宽度"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="wx-cpsx">
+            <p class="wx-cpjg">价格:<span>￥168</span></p>
+            <p class="wx-cpmc">产品名称</p>
+            <p class="wx-cpsx1">介绍:</p>
+            <p class="wx-cpsx2">价格:</p>
+        </div>
+
+
+
+        <div   class="wx-cpxxxx">
+            <div  class="wx-xx-dp">
+                <a class="wx-xxxx">详细信息</a><a class="wx-dp">点评</a></div>
+
+
+            <div class="wx-cpxqy" >
+                <div class="wx-cptujs">
+                    <img src="../images/mipmap-xhdpi/wx-rzcp.png">
+                    <img src="../images/mipmap-xhdpi/wx-rzcp.png"></div>
+                <div class="wx-cpdp">
+
+                    <div class="shop-rating">
+                        <span class="title">产品评价:</span>
+                        <ul class="rating-level" id="stars2">
+                            <li><a href="javascript:void(0);" class="one-star" star:value="20">20</a></li>
+                            <li><a href="javascript:void(0);" class="two-stars" star:value="40">40</a></li>
+                            <li><a href="javascript:void(0);" class="three-stars" star:value="60">60</a></li>
+                            <li><a href="javascript:void(0);" class="four-stars" star:value="80">80</a></li>
+                            <li><a href="javascript:void(0);" class="five-stars" star:value="100">100</a></li>
+                        </ul>
+                        <span id="stars2-tips" class="result"></span>
+                        <input type="hidden" id="stars2-input" name="b" value="" size="2" />
+                    </div>
+                    <div  class="wx-bot-sc">
+                        <i class=" wx-ts-ico iconfont">&#xe624;</i>
+                        <input type="text" placeholder="说出你对产品的评价...">
+                        <a href="#" onclick="doComment()" class="sub-comment">提交</a>
+                    </div>
+
+                    <p>点评.........</p>
+                    <p>点评.........</p>
+                    <p>点评.........</p>
+                </div></div>
+
+
+            <!--评分-->
+            <script>
+                var TB = function() {
+                    var T$ = function(id) { return document.getElementById(id) }
+                    var T$$ = function(r, t) { return (r || document).getElementsByTagName(t) }
+                    var Stars = function(cid, rid, hid, config) {
+                        var lis = T$$(T$(cid), 'li'), curA;
+                        for (var i = 0, len = lis.length; i < len; i++) {
+                            lis[i]._val = i;
+                            lis[i].onclick = function() {
+                                T$(rid).innerHTML = '<em>' + (T$(hid).value = T$$(this, 'a')[0].getAttribute('star:value')) + '分</em> - ' + config.info[this._val];
+                                curA = T$$(T$(cid), 'a')[T$(hid).value / config.step - 1];
+                            };
+                            lis[i].onmouseout = function() {
+                                curA && (curA.className += config.curcss);
+                            }
+                            lis[i].onmouseover = function() {
+                                curA && (curA.className = curA.className.replace(config.curcss, ''));
+                            }
+                        }
+                    };
+                    return {Stars: Stars}
+                }().Stars('stars2', 'stars2-tips', 'stars2-input', {
+                    'info' : ['很差', '差', '一般', '好', '很好'],
+                    'curcss': ' current-rating',
+                    'step': 20
+                });
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div data-role="footer" data-position="fixed">
+
+            <ul class="wx-cp-lkgm">
+                <li class="cp-sc"><a href="#" >
+                    <i class="wx-wsc iconfont">&#xe60a;</i>
+                    <i class="wx-ysc iconfont">&#xe60e;</i>
+                    <p class="wx-wsc">收藏</p>
+                    <p class="wx-ysc">已收藏</p></a></li>
+                <li class="cp-jygwc"><a href="#" >加入购物车</a></li>
+                <li class="cp-lkgm"><a href="#" >立刻购买</a></li>
+            </ul>
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".cp-sc a").click(function(){
+                $(".wx-wsc").toggle();
+                $(".wx-ysc").toggle();
+            });
+        });
+    </script>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

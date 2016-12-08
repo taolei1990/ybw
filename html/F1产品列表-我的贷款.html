@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的贷款</title>
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+
+    </head>
+<body class="noshadow ">
+<div data-role="page"  >
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <a href="#" class="ico-btn-l"><i class="icon-bs iconfont">&#xe61e;</i></a>
+        <h1>我的贷款</h1>
+        <a href="#" class="ico-btn-r"><i class="icon-bs iconfont ">&#xe605;</i></a></div>
+
+    <!-- /header -->
+    <div data-role="main">
+        <div class="wx-dkimg">
+            <img src="../images/mipmap-xhdpi/dkbann.png" >
+        </div>
+        <div class="x-dklb">
+        <div class="wx-dkxm">
+         <img src="../images/mipmap-xhdpi/tz(2).png" >
+            <h1>北京某医疗设备项目</h1>
+            <p>北京某医疗设备项目北京某医疗设备某医疗设备项目北京某医疗设备项目</p>
+        </div>
+        <div class="wx-dkxm">
+            <img src="../images/mipmap-xhdpi/tz(1).png" >
+            <h1>北京某医疗设备项目</h1>
+            <p>北京某医疗设备项目北京某医疗设备项目</p>
+        </div>
+        <div class="wx-dkxm">
+            <img src="../images/mipmap-xhdpi/tz(3).png" >
+            <h1>北京某医疗设备项目</h1>
+            <p>北京某医疗设备项目北京某医疗设备项目</p>
+        </div>
+        </div>
+        <h1 class="wx-jjr"><i class="iconfont">&#xe650;</i>经纪人</h1>
+
+            <div class="slider js_multislides multislides">
+                <div class="frame js_frame">
+                    <ul class="slides js_slides">
+                        <li class="js_slide">
+                               <img src="../images/mipmap-xhdpi/tmdzk-1%20(1).png">
+                               <b>名字1</b>
+                               <p>贷款服务</p>
+                               <span>西安市</span>
+                                                </li>
+                        <li class="js_slide">
+                            <img src="../images/mipmap-xhdpi/tmdzk-1%20(1).png">
+                            <b>名字1</b>
+                            <p>贷款服务</p>
+                            <span>西安市</span>
+                        </li>
+                        <li class="js_slide">
+                            <img src="../images/mipmap-xhdpi/tmdzk-1%20(1).png">
+                            <b>名字1</b>
+                            <p>贷款服务</p>
+                            <span>西安市</span>
+                        </li>
+                        <li class="js_slide">
+                            <img src="../images/mipmap-xhdpi/tmdzk-1%20(1).png">
+                            <b>名字1</b>
+                            <p>贷款服务</p>
+                            <span>西安市</span>
+                        </li>
+                    </ul>
+                </div>
+                <span class="js_prev prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
+                </span>
+
+                <span class="js_next next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
+                </span>
+            </div>
+        <script src="../js/lory.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var multiSlides      = document.querySelector('.js_multislides');
+                    lory(multiSlides, {
+                        infinite: 4,
+                        slidesToScroll: 4,
+                        enableMouseEvents:true,
+                    });
+                });
+            </script>
+
+
+
+    </div>
+    <div data-role="footer" data-position="fixed">
+
+
+            <ul class="wx-wodhk">
+                <li><a href="#"  ><i class="iconfont">&#xe651;</i>常见问题</a></li>
+                <li><a href="#"  ><i class="iconfont">&#xe650;</i>我的还款</a></li>
+                <li><a href="#"  ><i class="iconfont">&#xe653;</i>我的申请</a></li>
+            </ul>
+</div>
+</div>
+</body>
+</html>

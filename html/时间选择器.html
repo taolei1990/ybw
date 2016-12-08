@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>成功案例</title>
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+   <!--调用日期时间选择控件-->
+    <link rel="stylesheet" type="text/css" href="../src/DateTimePicker.css" />
+    <script type="text/javascript" src="../src/DateTimePicker.js"></script>
+    <script type="text/javascript" src="../src/DateTimePicker-i18n.js"></script>
+    <!--调用日期时间选择控件-->
+</head>
+<body class="noshadow ">
+<div data-role="page"  >
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <h1>日期选择</h1>
+       </div>
+    <div data-role="main">
+
+        <div class="time">
+             <span>设置开始时间: </span>
+             <input type="text"  data-field="datetime" readonly>
+            <div id="dtBox1"></div>
+        </div>
+
+        <div class="time">
+            <span>设置结束时间: </span>
+            <input type="text"  data-field="datetime" readonly>
+            <div id="dtBox2"></div>
+       </div>
+
+
+        <script type="text/javascript">
+            // German Locale Strings Source - https://github.com/solala888/DateTimePicker
+            $(document).ready(function()
+            {
+                $("#dtBox1").DateTimePicker({
+                    language:'zh-CN',//如果不需要下面显示中文年月日可以将这句删掉
+                    defaultDate: new Date(),
+                    animationDuration:200,
+                    buttonsToDisplay: [ "SetButton", "ClearButton"],
+                    clearButtonContent: "取消"
+                });
+                $("#dtBox2").DateTimePicker({
+                    language:'zh-CN',
+                    defaultDate: new Date(),
+                    animationDuration:200,
+                    buttonsToDisplay: [ "SetButton", "ClearButton"],
+                    clearButtonContent: "取消"
+                });
+            });
+
+        </script>
+      </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>@LB</h4>
+    </div>
+</div>
+</body>
+</html>

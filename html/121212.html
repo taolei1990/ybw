@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RedAnt</title>
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+<link rel="stylesheet" href="../principal.css">
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <!-- 引用控制层插件样式 -->
+    <link rel="stylesheet" href="control/css/zyUpload.css" type="text/css">
+
+    <!-- 引用核心层插件 -->
+    <script src="core/zyFile.js"></script>
+    <!-- 引用控制层插件 -->
+    <script src="control/js/zyUpload.js"></script>
+    <!-- 引用初始化JS -->
+    <script src="core/lanrenzhijia.js"></script>
+</head>
+<body class="wx-sf">
+<div data-role="page" data-fullscreen="true" class="noshadow wx-tc">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" class="ui-hea">
+        <h1> 我的微官网</h1>
+        <a href="#" class="ui-btn-right  ui-btn ui-btn-1 ui-corner-all ui-shadow ui-btn-icon-left ui-icon-List ui-btn-icon-notext">Button</a> </div>
+    <!-- /header -->
+
+    <div role="main" >
+        <form id="projectSave" action="/projectSave.action" method="post" enctype="multipart/form-data" data-ajax="false">
+            <h4 class="ui-dpxx"><i class="ui-ico ui-a-c"> </i> 店铺基本信息</h4>
+
+            <div  class="ui-margin-1">
+                <input type="text" class="ui-ipt-wzdx" data-corners="false" name="projectTitle" id="projectTitle" value="" placeholder="给你微店取个好听的名字（必填）"/>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a ui-block-a-1">
+                        <i class="iconfont">&#xe626; </i>
+                        <select name="projectType" id="projectType" data-native-menu="false" data-corners="false" data-role="none" class="scinput1">
+                            <option  data-placeholder="true">选择省份</option>
+                            <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option> <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option> <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="ui-block-b ui-block-a-1">
+                        <i class="iconfont">&#xe626; </i>
+                        <select name="financingNeeds" id="financingNeeds" data-native-menu="false" data-corners="false"  data-role="none" class="scinput1">
+                            <option  data-placeholder="true">选择市</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                            <option value="standard">Standard: 7 day</option>
+                        </select>
+                    </div>
+                    <div class="ui-block-a ui-block-a-1">
+                        <i class="iconfont">&#xe626; </i>
+                        <select name=""  data-native-menu="false" data-corners="false" data-role="none" class="scinput1">
+                            <option  data-placeholder="true"> 选择区/县</option>
+                            <option value="mon">星期一</option>
+                            <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui-dpxx"><i class="ui-ico ui-a-d"> </i> 项目信息</h4>
+
+            <div class="ui-margin-1">
+                <div class="ui-xmmc"> <span>项目名称：</span>
+                    <input type="text" class="ui-ipt-wz" data-corners="false" name=""  value="" placeholder="（必填）"/>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a ui-block-a-1">
+                        <i class="iconfont">&#xe626; </i>
+                        <select name="projectType"  data-native-menu="false" data-corners="false" data-role="none" class="scinput1">
+                            <option  data-placeholder="true">选择省份</option>
+                            <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option> <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option> <option value="tue">星期二</option>
+                            <option value="wed">星期三</option>
+                            <option value="thu">星期四</option>
+                            <option value="fri">星期五</option>
+                            <option value="sat">星期六</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="ui-block-b ui-block-a-1">
+                        <i class="iconfont">&#xe626; </i>
+                        <select name="financingNeeds"  data-native-menu="false" data-corners="false"  data-role="none" class="scinput1">
+                            <option  data-placeholder="true">选择市</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                            <option value="standard">Standard: 7 day</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="wx-sczl">上传资料:</p>
+                <a href="javascript:;" class="wx-file">
+                    <div id="localImag">
+                        <img id="preview" >
+                    </div>
+                    <input type="file" data-corners="false" name="file" id="doc" value=""
+                           onchange="javascript:setImagePreview();" >
+                </a>
+                <div id="demo" class="demo"></div>
+                <p class="ui-tiwz">*支持jpg png 格式不大于1M的图片</p>
+                <div class="ui-xmmc"> <span>项目介绍：</span>
+                    <textarea  data-corners="false" maxlength="500"  placeholder="（必填）" ></textarea>
+                </div>
+                <div class="ui-xmmc"> <span>联系电话：</span>
+                    <input type="text" class="ui-ipt-wz" data-corners="false" name="" id="" value="" placeholder="（必填）"/>
+                </div>
+                <a  href="#myPopup1"  class="ui-btn ckwdgw">查看我的官网</a> </div>
+
+        </form>
+    </div>
+
+
+</div>
+<!-- /page -->
+
+<script type="text/javascript">
+    //下面用于图片上传预览功能
+    function setImagePreview(avalue) {
+        var docObj=document.getElementById("doc");
+
+        var imgObjPreview=document.getElementById("preview");
+
+        if(docObj.files &&docObj.files[0])
+        {
+//火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '60px';
+            imgObjPreview.style.height = '60px';
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+//IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+//必须设置初始大小
+            localImagId.style.width = "60px";
+            localImagId.style.height = "60px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+</script>
+
+</body>
+</html>

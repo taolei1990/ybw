@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>路演详情页</title>
+
+    <link rel="stylesheet"   href="../jquery.mobile-1.4.5.css" >
+    <link rel="stylesheet"   href="../principal.css" >
+    <script src="../jquery.js"></script>
+    <script src="../jquery.mobile-1.4.5.js"></script>
+    <script src="../js/jquery_customize.js"></script>
+</head>
+<body class="noshadow ">
+<div data-role="page"  >
+    <div data-role="header" data-position="fixed" class="ui-hea">
+        <a href="#" class="ico-btn-l"><i class="icon-bs iconfont">&#xe61e;</i></a>
+        <h1>活动</h1>
+        <a href="#" class="ico-btn-r"><i class=" icon-bs iconfont ">&#xe60b;</i></a></div>
+
+    <!-- /header -->
+    <div data-role="main">
+<div class="wx-luhd">
+    <img src="../images/mipmap-xhdpi/luying.png" >
+</div>
+        <div class="wx-lyxq">
+            <h1>北京某医疗设备项目股权融资900万</h1>
+            <p class="wx-luhdsj">
+                <em>7月19日</em>
+                <span><i class="iconfont">&#xe60b;</i>500</span><!--分享-->
+                <span><i class="iconfont">&#xe61a;</i>560</span><!--访问量-->
+            </p>
+            <p><i class="iconfont">&#xe601;</i>
+                <span>07-19 15:00</span>
+                <em>至</em>
+                <span>12-31 17:00</span></p>
+            <p><i class="iconfont">&#xe60f;</i>
+                <em>所在地区：</em>
+                <span>陕西省 西安市</span></p>
+            <p><i class="iconfont">&#xe63c;</i>
+                <em>已报名1人</em> / <span>限50人报名</span>
+                </p>
+            <p><i class="iconfont">&#xe643;</i>
+                <b>免费</b>
+            </p>
+        </div>
+
+        <div class="wx-gzt">
+            <img src="../images/mipmap-xhdpi/tx-2.png" >
+            <h1>北京某医疗设备</h1>
+            <P>
+                <em>融资资金:</em><b>900万</b>
+                <br>
+                <span>介绍介绍介绍介绍介绍介绍介介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</span>
+            </P>
+            <div class="gz-lx">
+                <a class="wx-ygz">
+                    <span>+ 关注</span>
+                    <em>已关注</em>
+                </a>
+                <a href="#">联系TA</a>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".wx-ygz").click(function(){
+                        $(".wx-ygz span").toggle();
+                        $(".wx-ygz em").toggle();
+                    });
+                });
+            </script>
+        </div>
+        <div class="wx-ybaom">
+            <h1>以报名（ <span>56</span> ）</h1>
+<ul class="wx-bmgs"><!--添加报名用户的时候注意第四 和最后的位置 类和图片-->
+
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li class="ybm-4">
+        <a href="#"><img src="../images/mipmap-xhdpi/bmyh.png" ></a><!--注意这是第四的个li就必须放在第四的位置上图片和类不能更改-->
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="../images/mipmap-xhdpi/tc-1.png " >
+            <p>名字</p></a>
+    </li>
+    <li class="ybm-n">
+        <a href="#"><img src="../images/mipmap-xhdpi/bmyh-on.png "></a><!--注意这是最后的个li就必须放在最后的位置上图片和类不能更改-->
+    </li>
+</ul>
+        </div>
+
+        <div class="wx-lypl">
+            <h1>评论（ <span>0</span> ）</h1>
+
+        </div>
+        <div  class="wx-bot-sc">
+            <i class=" wx-ts-ico iconfont">&#xe624;</i>
+            <input type="text" placeholder="说点什么吧">
+            <a href="#" onclick="doComment()" class="sub-comment">提交</a>
+        </div>
+
+        <div class="wx-jcdp">
+            <h1><i class="jchd iconfont">&#xe644;</i>精彩活动 <i class="wx-gd iconfont">更多&#xe631;</i></h1>
+            <div class="wx-jchd-list">
+                <img src="../images/mipmap-xhdpi/wx-xmrz.png" >
+                <h1>北京某医疗设备项设备项</h1>
+                <p><em>融资金额:</em><b>900万</b></p>
+                <p><em>所在地:</em><span>西安</span>
+                </p>
+            </div>
+            <div class="wx-jchd-list">
+                <img src="../images/mipmap-xhdpi/wx-xmrz.png" >
+                <h1>北京某医疗设备项设备项</h1>
+                <p><em>融资金额:</em><b>900万</b></p>
+                <p><em>所在地:</em><span>西安</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div class="wx-db-bm ">
+            <ul>
+                <li><a href="#" class="ly-pl"><i class=" iconfont">&#xe647;</i><p>评论(<span>10</span>)</p></a></li>
+                <li><a href="#" class="ly-sc"><i class=" iconfont">&#xe60a;</i><p>收藏(<span>6</span>)</p></a></li>
+                <li><a href="" class="ly-wybm"><i class=" iconfont">&#xe63d;</i>我要报名</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
